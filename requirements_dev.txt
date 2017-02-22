@@ -1,0 +1,6 @@
+tox
+bumpversion
+pytest
+pylint
+flake8
+mock

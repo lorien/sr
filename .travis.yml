@@ -1,0 +1,24 @@
+language: python
+
+python: 2.7
+
+sudo: false
+
+env:
+  - TOX_ENV=py27
+  - TOX_ENV=py34
+
+matrix:
+  include:
+    - python: 3.4
+      env: TOX_ENV=quality
+    - python: 3.5
+      env: TOX_ENV=py35
+    - python: 3.6
+      env: TOX_ENV=py36
+
+before_script:
+  - python -m pip install -U pip setuptools tox
+
+script:
+  - tox -e $TOX_ENV

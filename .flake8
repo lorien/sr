@@ -1,0 +1,3 @@
+[flake8]
+ignore = E261,E265
+exclude = old.py
